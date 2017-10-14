@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sign up</title>
+<link rel="stylesheet" type="text/css" href="css/form.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="JS/FormValidator.js">
+	
+</script>
+<style>
+
+</style>
+</head>
+<body >
+<div class="Container">
+<h3>Sign up</h3>
+	<form name="myform" action="SignUp" method="post"
+		onsubmit="return formValidate();">
+				<div class="row">
+					<div class="col-sm-10">
+						<div class="form-group">
+							<label for="email">Email:</label>
+							<input type="text" name="email" Placeholder="Enter Email"
+								class="form-control" id="email" required>
+								<font color="red"><span id="emailerr"></span></font>	
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="row">
+						<div class="col-sm-10">
+							<div class="form-group">
+							<label for="name">Name:</label>
+								<input type="text" name="username" Placeholder="Enter Username"
+									class="form-control" required>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-10">
+						<div class="form-group">
+						<label for="pwd">Password:</label>
+							<input type="password" name="password" Placeholder="Enter password"
+								id="pwd" class="form-control" required>
+							<font color="red"><span id="pwderr" ></span></font>	
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-10">
+						<div class="form-group">
+						<label for="no">Mobile No:</label>
+							<input type="number" name="mobileno" Placeholder="Mobile Number"
+								id="no"  class="form-control" required>
+								<font color="red"><span id="noerr" ></span></font>	
+						</div>
+					</div>
+				</div>
+			
+			<input type="submit" value="SignUp" class="btn btn-success">
+			</div>
+
+	</form>
+	</div>
+</body>
+</html>
