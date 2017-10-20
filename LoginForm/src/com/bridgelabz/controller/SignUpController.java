@@ -18,7 +18,7 @@ import com.bridgelabz.model.User;
 /**
  * Servlet implementation class SignUpController
  */
-@WebServlet("/SignUp")
+//@WebServlet("/SignUp")
 public class SignUpController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	static  Logger logger=Logger.getLogger(SignUpController.class);
@@ -56,9 +56,9 @@ public class SignUpController extends HttpServlet {
 		if(status>0){
 			logger.info("Log in Successful");
 			out.println("Signup successful!");
-			response.sendRedirect("Login.jsp");
+			response.sendRedirect("Login");
 		}else{
-			logger.warn("Signup failed");
+			logger.warn("Signup .failed");
 			out.println("ReEnter data some error occured");
 			request.getRequestDispatcher("Signup.html").include(request,response);
 		}

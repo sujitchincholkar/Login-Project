@@ -5,15 +5,61 @@
     <welcome-file>Login.jsp</welcome-file>
   </welcome-file-list>
   <filter>
-	<filter-name>SessionFilter</filter-name>
+	<filter-name>CacheFilter</filter-name>
 	<filter-class>
-		com.bridgelabz.controller.SessionFilter
+		com.bridgelabz.Filters.CacheControl
 	</filter-class>
 </filter>
 <filter-mapping>
-	<filter-name>SessionFilter</filter-name>
-	<url-pattern>/Home.jsp</url-pattern>
+	<filter-name>CacheFilter</filter-name>
+	<url-pattern>/Home</url-pattern>
 	<url-pattern>/LoginC</url-pattern>
 </filter-mapping>
 
+<servlet>   
+  <servlet-name>Login</servlet-name>
+  <jsp-file>/Login.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>Login</servlet-name>
+  <url-pattern>/Login</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>Home</servlet-name>
+  <jsp-file>/Home.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>Home</servlet-name>
+  <url-pattern>/Home</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>   
+  <servlet-name>LoginC</servlet-name>
+  <servlet-class>com.bridgelabz.controller.LoginController</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>LoginC</servlet-name>
+  <url-pattern>/LoginC</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>Logout</servlet-name>
+  <servlet-class>com.bridgelabz.controller.Logout</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>Logout</servlet-name>
+  <url-pattern>/Logout</url-pattern>
+</servlet-mapping>
+
+<servlet>   
+  <servlet-name>SignUp</servlet-name>
+  <servlet-class>com.bridgelabz.controller.SignUpController</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>SignUp</servlet-name>
+  <url-pattern>/SignUp</url-pattern>
+</servlet-mapping>
 </web-app>

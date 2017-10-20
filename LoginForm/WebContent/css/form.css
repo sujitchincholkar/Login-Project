@@ -1,33 +1,32 @@
 
 a{
-
+ margin-right: 15px;
 }
 body,html{
 	background-color:#E6E7DA;
 }
 h3{
 
-	background-color:#2AB299 ;
-	margin-top:1px;
+	margin-left:10px;
 	padding-left:10px;
 	padding-top:10px;
 	padding-right:40px;
 	padding-bottom:10px;
-	box-shadow: 0 0 5px green;
+
 }
 button{
-	width:80%;
-	margin-left: 20px;
+	width:100%;
+
 }
 form{
 	margin-left:30px;
 	margin-right:30px;
-	background-color: #FBFBF1 ;
+	background-color:  #FEFEF5 ;
 }
 
 .Container{
-    background-color: #FBFBF1;
-    border-radius:10px ;
+    background-color:  #FEFEF5;
+
 	position:absolute;
 	margin: auto;
 	top: 0;
@@ -45,9 +44,10 @@ form{
 }
 .form-group{
 	width:100%;
+	
 }
 .btn-center{
-	margin-bottom:10px;
+	margin-top:5px;
 	text-align:center;
 }
 input[type=nmber]::-webkit-outer-spin-button ,
@@ -57,11 +57,12 @@ input[type=number]::-webkit-inner-spin-button{
     appearance: none;
     margin: 0; 
 }
+
 input[type=text],input[type=email],input[type=password],input[type=number]{
 	padding-top:10px;
-	border:0;
-	outline:0;
+	border:0px solid;
+	outline:0px;
 	background:transparent;
-	border-bottom:1px solid green;
+	border-bottom:2px solid green;
 	border-radius: 0;
 }

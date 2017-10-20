@@ -7,7 +7,7 @@ function formValidate() {
 		document.getElementById("noerr").innerHTML="";
 		var isValid=true;
 		var emailValidation=/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-		var mobileValidation=/^((\+)?(\d{2}[-]))?(\d{10}){1}?$/;
+		var mobileValidation=/^((\+)?(\d{2}[-]))?(\d{10})$/;
 		if(!emailValidation.test(email)){
 			document.getElementById("emailerr").innerHTML="Invalidvalid email";
 			isValid=false;

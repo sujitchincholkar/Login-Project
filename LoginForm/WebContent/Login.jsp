@@ -14,14 +14,16 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="Container" style="max-height:350px">
+	<div class="Container" >
 	
 		<div class="row">
 			<div class="col-sm-12">
-				<h3>Login</h3>
-			</div>
+				<h3>Sign In</h3><br>
+			</div><br>
+		
+			
 		</div>
-		<form name="myform" action="LoginC" method="post">
+		<form name="myform" action="<%=response.encodeURL("LoginC")%>" method="post">
 		<font color="red">
 	<%
 	String message=(String)session.getAttribute("error");
@@ -36,7 +38,7 @@
 					<div class="form-group">
 
 						<label for="email">Email:</label> <input class="form-control"
-							type="email" name="email" Placeholder="Enter email" id="email"
+							type="email" name="email" Placeholder="Enter email" id="email" 
 							required>
 					</div>
 				</div>
@@ -46,24 +48,23 @@
 					<div class="form-group">
 						<label for="pwd">Password:</label> <input type="password"
 							class="form-control" name="password" Placeholder="Enter password"
-							id="pwd" required>
+							id="pwd" required><br>
 					</div>
 				</div>
 			</div>
+			
 			<div class="btn-center">
-				<div class="row">
+			
 				
-					<div class="col-sm-12">
+					<div class="col-sm-6">
 						<button type="submit" class="btn btn-danger">Login</button>
 					</div>
-				</div>
+				
 			</div>
 		</form>
 		<div class="btn-margin">
 		<div class="btn-center">
-			<div class="row">
-			
-				<div class="col-sm-12">
+				<div class="col-sm-6">
 
 					<a href="Signup.html">
 
@@ -71,9 +72,10 @@
 					</a>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
+				</div>
+
+			
+		
 </body>
 
 </html>

@@ -15,7 +15,7 @@ import com.bridgelabz.model.User;
 /**
  * Servlet implementation class LoginController
  */
-@WebServlet("/LoginC")
+//@WebServlet("/LoginC")
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	static  Logger logger=Logger.getLogger(LoginController.class);
@@ -49,14 +49,16 @@ public class LoginController extends HttpServlet {
 			logger.info("log in failed");
 			HttpSession session=request.getSession();
 			session.setAttribute("error", "Invalid username or password");
-			response.sendRedirect("Login.jsp");
+			response.sendRedirect("Login");
 		}else{
 			logger.info("log in successful");
 			HttpSession session=request.getSession();
 			session.setAttribute("id", user.getId());
 			session.setAttribute("name",user.getName());
+			response.sendRedirect(response.encodeRedirectURL("Home"));
+
 			//request.getRequestDispatcher("/Home.jsp").forward(request,response);
-			response.sendRedirect("Home.jsp");
+		
 		}
 		
 	}

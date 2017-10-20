@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
 /**
  * Servlet implementation class Logout
  */
-@WebServlet("/Logout")
+//@WebServlet("/Logout")
 public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	Logger logger=Logger.getLogger(Logout.class); 
@@ -37,11 +37,11 @@ public class Logout extends HttpServlet {
 		session.removeAttribute("id");
 		session.invalidate();
 		logger.info("Logout successful");
-		response.sendRedirect("Login.jsp");
+		response.sendRedirect("Login");
 		}
 		else{
 			logger.warn("logged out without session");
-			response.sendRedirect("Login.jsp");
+			response.sendRedirect("Login");
 		}
 	}
 
